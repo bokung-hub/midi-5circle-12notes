@@ -15,7 +15,7 @@
 
         body {
             margin: 0;
-            padding: 0;
+            padding: 40px 20px;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -26,8 +26,9 @@
             /* 印第安幾何圖騰背景圖 (SVG Data URI) */
             background-image: 
                 radial-gradient(circle at center, rgba(139, 58, 43, 0.25) 0%, transparent 70%),
-                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="%238b3a2b" stroke-width="1" opacity="0.2"/><path d="M30 10 L50 30 L30 50 L10 30 Z" fill="none" stroke="%23d49a37" stroke-width="0.8" opacity="0.25"/><circle cx="30" cy="30" r="3" fill="%232a8b8b" opacity="0.3"/></svg>');
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="%238b3a2b" stroke-width="1" opacity="0.2"/><path d="M30 10 L50 30 L30 50 L10 30 Z" fill="none" stroke="%23d4af37" stroke-width="0.8" opacity="0.25"/><circle cx="30" cy="30" r="3" fill="%232a8b8b" opacity="0.3"/></svg>');
             background-repeat: repeat;
+            box-sizing: border-box;
         }
 
         .portal-container {
@@ -60,6 +61,12 @@
             letter-spacing: 2px;
             margin-bottom: 30px;
             text-shadow: 1px 1px 3px #000;
+        }
+
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
         }
 
         .card-link {
@@ -100,10 +107,22 @@
     <div class="portal-container">
         <h1>◆ 印第安音律儀式 ◆</h1>
         
-        <a href="midi_circles7.html" class="card-link">
-            <div class="symbol">🪶 ⚙️ 🪶</div>
-            <div class="card-title">MIDI 音階圓盤示波器</div>
-        </a>
+        <div class="card-list">
+            <a href="midi_circles7.html" class="card-link">
+                <div class="symbol">🪶 ⚙️ 🪶</div>
+                <div class="card-title">MIDI 音階圓盤示波器</div>
+            </a>
+
+            <a href="3d4.html" class="card-link">
+                <div class="symbol">✡️ 🎶 ✡️</div>
+                <div class="card-title">梅爾卡巴3D幾何midi播放程式 gemini</div>
+            </a>
+
+            <a href="梅爾卡巴六角星midi程式7.html" class="card-link">
+                <div class="symbol">✡️ 🎶 ✡️</div>
+                <div class="card-title">梅爾卡巴3D幾何midi播放程式 fable</div>
+            </a>
+        </div>
     </div>
 
 </body>
