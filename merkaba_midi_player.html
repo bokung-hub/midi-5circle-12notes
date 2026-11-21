@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>音階六角形 · 梅爾卡巴 MIDI 軌跡播放器</title>
+<title>音階六芒星 · 梅爾卡巴 MIDI 軌跡播放器</title>
 <style>
 :root{--bg:#0a0f1c;--panel:#111a30;--line:#26334f;--txt:#dfe7f7;--dim:#8da0c4;--acc:#ffd166;--cy:#50c8ff}
 *{box-sizing:border-box}
@@ -40,8 +40,8 @@ details p,details li{margin:.4em 0}
 </head>
 <body>
 <header>
-  <h1>✦ 音階六角形 · 梅爾卡巴 3D 矩陣 · MIDI 軌跡播放器</h1>
-  <small>12 條音階射線 × 10 個八度 = 120 個六角格(MIDI 0–119)· 只用升記號 <span class="sharp">♯</span> · 中心為空六角形</small>
+  <h1>✦ 音階六芒星 · 梅爾卡巴 3D 矩陣 · MIDI 軌跡播放器</h1>
+  <small>12 條音階射線 × 10 個八度 = 120 個六角格(MIDI 0–119)· 只用升記號 <span class="sharp">♯</span> · 中心為空六芒星</small>
 </header>
 
 <section class="views">
@@ -106,7 +106,7 @@ details p,details li{margin:.4em 0}
 
 <details>
   <summary>這個模型怎麼對應?(點開看說明)</summary>
-  <p><b>一條規則:</b>半音階繞著一個空的六角形向外螺旋,每圈 12 格 = 一個八度。把 12 個音級放在 12 條射線上(每 30° 一條),往外一格就高一個八度。</p>
+  <p><b>一條規則:</b>半音階繞著一個空的六芒星向外螺旋,每圈 12 格 = 一個八度。把 12 個音級放在 12 條射線上(每 30° 一條),往外一格就高一個八度。</p>
   <ul>
     <li><b>平面六角星:</b>兩個正三角形疊成的六角星(梅爾卡巴由上往下的投影),內含 121 個六角格:中心 1 格留空,其餘 120 格 = 12 條楔形 × 10 個八度 = MIDI 0–119。每個楔形從自己的射線起順時針涵蓋 30°。</li>
     <li><b>3D 矩陣:</b>同一批六角格,水平位置與平面圖完全相同,高度 = 音高。按「俯視」就會回到平面投影。金色與青色線框是兩個反向的正四面體(梅爾卡巴,共 12 條稜、頂點投影成六角星)。</li>
@@ -135,7 +135,7 @@ function buildStar() {
   const cells = [];
   for (let r = -12; r <= 12; r++) for (let q = -12; q <= 12; q++) {
     const x = q + r / 2, y = SQ3 / 2 * r;
-    if (Math.abs(x) < 1e-9 && Math.abs(y) < 1e-9) continue;          // 中心:空六角形
+    if (Math.abs(x) < 1e-9 && Math.abs(y) < 1e-9) continue;          // 中心:空六芒星
     const dA = Math.max(...nA.map(n => n[0] * x + n[1] * y));
     const dB = Math.max(...nB.map(n => n[0] * x + n[1] * y));
     const lam = Math.min(dA, dB) / (SQ3 / 2);                          // 六角星範數(第幾層殼)
